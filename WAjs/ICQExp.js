@@ -43,7 +43,7 @@ var buddiesList;
 
 var buddies;
 
-// Integration with WebAgent (TM)
+// Integration with WebAgent
 var currentConversation;
 
 
@@ -116,7 +116,7 @@ function fetchEvents(){
 					appendConvo(currentConversation, eventItem.eventData.message);
 				}
 				else{
-					console.log("OOU PRISHLO SMSKA DAVAY INCEPTION DELAY NORM ZVUK A TO ETO HUYNAY");
+					gotMessage();
 				}
 			}
 			prevEvN = eventItem.seqNum;

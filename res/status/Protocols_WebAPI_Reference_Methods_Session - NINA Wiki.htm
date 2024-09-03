@@ -1,0 +1,1346 @@
+<!DOCTYPE html>
+<html class="client-js" dir="ltr" lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+<title>Protocols/WebAPI/Reference/Methods/Session - NINA Wiki</title>
+<script src="Protocols_WebAPI_Reference_Methods_Session%20-%20NINA%20Wiki_files/f.txt"></script><script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"177030ceb9ce3aa60d718dbd","wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Protocols/WebAPI/Reference/Methods/Session","wgTitle":"Protocols/WebAPI/Reference/Methods/Session","wgCurRevisionId":1967,"wgRevisionId":1967,"wgArticleId":1297,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Stub","AOL","AIM","Protocols/WebAPI","Protocols/WebAPI/Reference","Work In Progress"],"wgPageViewLanguage":"en","wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"Protocols/WebAPI/Reference/Methods/Session","wgRelevantArticleId":1297,
+"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":true};RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.options":"loading","skins.vector.styles.legacy":"ready"};RLPAGEMODULES=["site","mediawiki.page.ready","mediawiki.toc","skins.vector.legacy.js"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.impl(function(){return["user.options@12s5i",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+}];});});</script>
+<link rel="stylesheet" href="Protocols_WebAPI_Reference_Methods_Session%20-%20NINA%20Wiki_files/load.css">
+<script async="" src="Protocols_WebAPI_Reference_Methods_Session%20-%20NINA%20Wiki_files/load.php"></script>
+<style>
+@media screen {
+	.toctoggle{-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;user-select:none;font-size:94%}}
+#mw-teleport-target{position:absolute;z-index:450}</style><meta name="ResourceLoaderDynamicStyles" content="">
+<link rel="stylesheet" href="Protocols_WebAPI_Reference_Methods_Session%20-%20NINA%20Wiki_files/load_002.css">
+<meta name="generator" content="MediaWiki 1.41.1">
+<meta name="robots" content="max-image-preview:standard">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=1000">
+<link rel="icon" href="https://wiki.nina.chat/favicon.ico">
+<link rel="search" type="application/opensearchdescription+xml" href="https://wiki.nina.chat/opensearch_desc.php" title="NINA Wiki (en)">
+<link rel="EditURI" type="application/rsd+xml" href="https://wiki.nina.chat/api.php?action=rsd">
+<link rel="alternate" type="application/atom+xml" title="NINA Wiki Atom feed" href="https://wiki.nina.chat/index.php?title=Special:RecentChanges&amp;feed=atom">
+<script async="" src="Protocols_WebAPI_Reference_Methods_Session%20-%20NINA%20Wiki_files/js"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-25FE5SCWV5');
+</script>
+<script data-ad-client="ca-pub-5399763425344945" async="" src="Protocols_WebAPI_Reference_Methods_Session%20-%20NINA%20Wiki_files/f_002.txt" data-checked-head="true"></script>
+<meta http-equiv="origin-trial" content="AlK2UR5SkAlj8jjdEc9p3F3xuFYlF6LYjAML3EOqw1g26eCwWPjdmecULvBH5MVPoqKYrOfPhYVL71xAXI1IBQoAAAB8eyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiV2ViVmlld1hSZXF1ZXN0ZWRXaXRoRGVwcmVjYXRpb24iLCJleHBpcnkiOjE3NTgwNjcxOTksImlzU3ViZG9tYWluIjp0cnVlfQ=="><meta http-equiv="origin-trial" content="Amm8/NmvvQfhwCib6I7ZsmUxiSCfOxWxHayJwyU1r3gRIItzr7bNQid6O8ZYaE1GSQTa69WwhPC9flq/oYkRBwsAAACCeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiV2ViVmlld1hSZXF1ZXN0ZWRXaXRoRGVwcmVjYXRpb24iLCJleHBpcnkiOjE3NTgwNjcxOTksImlzU3ViZG9tYWluIjp0cnVlfQ=="><meta http-equiv="origin-trial" content="A9uiHDzQFAhqALUhTgTYJcz9XrGH2y0/9AORwCSapUO/f7Uh7ysIzyszNkuWDLqNYg8446Uj48XIstBW1qv/wAQAAACNeyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiRmxlZGdlQmlkZGluZ0FuZEF1Y3Rpb25TZXJ2ZXIiLCJleHBpcnkiOjE3Mjc4MjcxOTksImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="A9R+gkZL3TWq+Z7RJ2L0c7ZN7FZD5z4mHmVvjrPitg/EMz9P3j5d3W7Vw5ZR9jtJGmWKltM4BO3smNzpCgwYuwwAAACTeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiRmxlZGdlQmlkZGluZ0FuZEF1Y3Rpb25TZXJ2ZXIiLCJleHBpcnkiOjE3Mjc4MjcxOTksImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="AlK2UR5SkAlj8jjdEc9p3F3xuFYlF6LYjAML3EOqw1g26eCwWPjdmecULvBH5MVPoqKYrOfPhYVL71xAXI1IBQoAAAB8eyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiV2ViVmlld1hSZXF1ZXN0ZWRXaXRoRGVwcmVjYXRpb24iLCJleHBpcnkiOjE3NTgwNjcxOTksImlzU3ViZG9tYWluIjp0cnVlfQ=="><meta http-equiv="origin-trial" content="Amm8/NmvvQfhwCib6I7ZsmUxiSCfOxWxHayJwyU1r3gRIItzr7bNQid6O8ZYaE1GSQTa69WwhPC9flq/oYkRBwsAAACCeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiV2ViVmlld1hSZXF1ZXN0ZWRXaXRoRGVwcmVjYXRpb24iLCJleHBpcnkiOjE3NTgwNjcxOTksImlzU3ViZG9tYWluIjp0cnVlfQ=="><meta http-equiv="origin-trial" content="A9uiHDzQFAhqALUhTgTYJcz9XrGH2y0/9AORwCSapUO/f7Uh7ysIzyszNkuWDLqNYg8446Uj48XIstBW1qv/wAQAAACNeyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiRmxlZGdlQmlkZGluZ0FuZEF1Y3Rpb25TZXJ2ZXIiLCJleHBpcnkiOjE3Mjc4MjcxOTksImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="A9R+gkZL3TWq+Z7RJ2L0c7ZN7FZD5z4mHmVvjrPitg/EMz9P3j5d3W7Vw5ZR9jtJGmWKltM4BO3smNzpCgwYuwwAAACTeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiRmxlZGdlQmlkZGluZ0FuZEF1Y3Rpb25TZXJ2ZXIiLCJleHBpcnkiOjE3Mjc4MjcxOTksImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"></head>
+<body class="skin-vector-legacy mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Protocols_WebAPI_Reference_Methods_Session rootpage-Protocols_WebAPI_Reference_Methods_Session skin-vector action-view" cz-shortcut-listen="true"><div id="mw-page-base" class="noprint"></div>
+<div id="mw-head-base" class="noprint"></div>
+<div id="content" class="mw-body" role="main">
+	<a id="top"></a>
+	<div id="siteNotice"></div>
+	<div class="mw-indicators">
+	</div>
+	<h1 id="firstHeading" class="firstHeading mw-first-heading"><span class="mw-page-title-main">Protocols/WebAPI/Reference/Methods/Session</span></h1>
+	<div id="bodyContent" class="vector-body">
+		<div id="siteSub" class="noprint">From NINA Wiki</div>
+		<div id="contentSub"><div id="mw-content-subtitle"></div></div>
+		<div id="contentSub2"></div>
+		
+		<div id="jump-to-nav"></div>
+		<a class="mw-jump-link" href="#mw-head">Jump to navigation</a>
+		<a class="mw-jump-link" href="#searchInput">Jump to search</a>
+		<div id="mw-content-text" class="mw-body-content mw-content-ltr" dir="ltr" lang="en"><div class="mw-parser-output"><table class="infobox" style="float: right; margin: 0 0 0.5em 0.5em; text-align:left; border: 1px solid #A5A29A; width:210px;" cellspacing="0" cellpadding="1">
+<tbody><tr>
+<td style="font-size: 95%; text-align:center; color:#000000; background-color:#AAAAAA"><a href="https://wiki.nina.chat/wiki/Protocols/WebAPI" title="Protocols/WebAPI"><font size="4" color="#000000"><b>WebAPI Protocol</b></font></a>
+</td></tr>
+<tr>
+<td>
+</td></tr>
+<tr>
+<td style="font-size: 95%; color:#000000; background-color:#AAAAAA; text-align:center;"><b>Basic</b>
+</td></tr>
+<tr>
+<td><a href="https://wiki.nina.chat/wiki/Protocols/WebAPI" title="Protocols/WebAPI">Introduction</a>
+</td></tr>
+<tr>
+<td style="font-size: 95%; color:#000000; background-color:#AAAAAA; text-align:center;"><b>Clients</b>
+</td></tr>
+<tr>
+<td><a href="https://wiki.nina.chat/wiki/Protocols/WebAPI/Clients/Whimsicals" title="Protocols/WebAPI/Clients/Whimsicals">Whimsicals</a>
+</td></tr>
+<tr>
+<td style="font-size: 95%; color:#000000; background-color:#AAAAAA; text-align:center;"><b>Host Interaction</b>
+</td></tr>
+<tr>
+<td>
+</td></tr>
+<tr>
+<td style="font-size: 95%; color:#000000; background-color:#AAAAAA; text-align:center;"><b>Flow</b>
+</td></tr>
+<tr>
+<td><a href="https://wiki.nina.chat/wiki/Protocols/WebAPI/Auth" title="Protocols/WebAPI/Auth">Authentication</a>
+</td></tr>
+<tr>
+<td>• <a href="https://wiki.nina.chat/wiki/Protocols/WebAPI/Auth" title="Protocols/WebAPI/Auth">Client</a>
+</td></tr>
+<tr>
+<td>• <a href="https://wiki.nina.chat/wiki/Protocols/WebAPI/Auth" title="Protocols/WebAPI/Auth">WebApp</a>
+</td></tr>
+<tr>
+<td style="font-size: 95%; color:#000000; background-color:#AAAAAA; text-align:center;"><b>Other Services</b>
+</td></tr>
+<tr>
+<td>
+</td></tr>
+<tr>
+<td>•
+</td></tr>
+<tr>
+<td style="font-size: 95%; color:#000000; background-color:#AAAAAA; text-align:center;"><b>Foodgroups</b>
+</td></tr>
+<tr>
+<td>
+</td></tr>
+<tr>
+<td>
+</td></tr>
+<tr>
+<td>
+</td></tr></tbody></table>
+<p>This page is about WebAPI session <a href="https://wiki.nina.chat/wiki/Protocols/WebAPI/Reference/Methods" title="Protocols/WebAPI/Reference/Methods">methods</a>, in a series for the WebAPI <a href="https://wiki.nina.chat/wiki/Protocols/WebAPI/Reference" title="Protocols/WebAPI/Reference">reference manual</a>.
+</p>
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none"><div class="toctitle" dir="ltr" lang="en"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#startSession"><span class="tocnumber">1</span> <span class="toctext">startSession</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#Input_Parameters"><span class="tocnumber">1.1</span> <span class="toctext">Input Parameters</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="#Output_Fields"><span class="tocnumber">1.2</span> <span class="toctext">Output Fields</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#Common_Status_Codes"><span class="tocnumber">1.3</span> <span class="toctext">Common Status Codes</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#Common_Status_Detail_Codes"><span class="tocnumber">1.4</span> <span class="toctext">Common Status Detail Codes</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#Sample_JSON_Output"><span class="tocnumber">1.5</span> <span class="toctext">Sample JSON Output</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#Sample_XML_Output"><span class="tocnumber">1.6</span> <span class="toctext">Sample XML Output</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-8"><a href="#fetchEvents"><span class="tocnumber">2</span> <span class="toctext">fetchEvents</span></a>
+<ul>
+<li class="toclevel-2 tocsection-9"><a href="#Input_Parameters_2"><span class="tocnumber">2.1</span> <span class="toctext">Input Parameters</span></a></li>
+<li class="toclevel-2 tocsection-10"><a href="#Output_Fields_2"><span class="tocnumber">2.2</span> <span class="toctext">Output Fields</span></a></li>
+<li class="toclevel-2 tocsection-11"><a href="#Common_Status_Codes_2"><span class="tocnumber">2.3</span> <span class="toctext">Common Status Codes</span></a></li>
+<li class="toclevel-2 tocsection-12"><a href="#Sample_JSON_Output_2"><span class="tocnumber">2.4</span> <span class="toctext">Sample JSON Output</span></a></li>
+<li class="toclevel-2 tocsection-13"><a href="#Sample_XML_Output_2"><span class="tocnumber">2.5</span> <span class="toctext">Sample XML Output</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-14"><a href="#deleteEvents"><span class="tocnumber">3</span> <span class="toctext">deleteEvents</span></a>
+<ul>
+<li class="toclevel-2 tocsection-15"><a href="#Input_Parameters_3"><span class="tocnumber">3.1</span> <span class="toctext">Input Parameters</span></a></li>
+<li class="toclevel-2 tocsection-16"><a href="#Output_Fields_3"><span class="tocnumber">3.2</span> <span class="toctext">Output Fields</span></a></li>
+<li class="toclevel-2 tocsection-17"><a href="#Common_Status_Codes_3"><span class="tocnumber">3.3</span> <span class="toctext">Common Status Codes</span></a></li>
+<li class="toclevel-2 tocsection-18"><a href="#Sample_JSON_Output_3"><span class="tocnumber">3.4</span> <span class="toctext">Sample JSON Output</span></a></li>
+<li class="toclevel-2 tocsection-19"><a href="#Sample_XML_Output_3"><span class="tocnumber">3.5</span> <span class="toctext">Sample XML Output</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-20"><a href="#endSession"><span class="tocnumber">4</span> <span class="toctext">endSession</span></a>
+<ul>
+<li class="toclevel-2 tocsection-21"><a href="#Input_Parameters_4"><span class="tocnumber">4.1</span> <span class="toctext">Input Parameters</span></a></li>
+<li class="toclevel-2 tocsection-22"><a href="#Common_Status_Codes_4"><span class="tocnumber">4.2</span> <span class="toctext">Common Status Codes</span></a></li>
+<li class="toclevel-2 tocsection-23"><a href="#Sample_JSON_Output_4"><span class="tocnumber">4.3</span> <span class="toctext">Sample JSON Output</span></a></li>
+<li class="toclevel-2 tocsection-24"><a href="#Sample_XML_Output_4"><span class="tocnumber">4.4</span> <span class="toctext">Sample XML Output</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-25"><a href="#startOSCARSession"><span class="tocnumber">5</span> <span class="toctext">startOSCARSession</span></a>
+<ul>
+<li class="toclevel-2 tocsection-26"><a href="#Input_Parameters_5"><span class="tocnumber">5.1</span> <span class="toctext">Input Parameters</span></a></li>
+<li class="toclevel-2 tocsection-27"><a href="#Output_Fields_4"><span class="tocnumber">5.2</span> <span class="toctext">Output Fields</span></a></li>
+<li class="toclevel-2 tocsection-28"><a href="#Common_Status_Codes_5"><span class="tocnumber">5.3</span> <span class="toctext">Common Status Codes</span></a></li>
+<li class="toclevel-2 tocsection-29"><a href="#Common_Status_Detail_Codes_2"><span class="tocnumber">5.4</span> <span class="toctext">Common Status Detail Codes</span></a></li>
+<li class="toclevel-2 tocsection-30"><a href="#Sample_JSON_Output_5"><span class="tocnumber">5.5</span> <span class="toctext">Sample JSON Output</span></a></li>
+<li class="toclevel-2 tocsection-31"><a href="#Sample_XML_Output_5"><span class="tocnumber">5.6</span> <span class="toctext">Sample XML Output</span></a></li>
+</ul>
+</li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="startSession">startSession</span></h2>
+<p>Start a Web AIM session. Since the AIM server needs to deliver 
+asynchronous events, such as receiving IMs or buddy updates, a session 
+is required for some of the APIs. However most of the APIs do not 
+require a session, so there is no need to create one. After starting a 
+session the AIM Session Id (aimsid) can be used instead of an NINA 
+Authentication Token for most of the APIs. An NINA Authentication Token 
+is required to start a session, which can be obtained with either <a href="https://wiki.nina.chat/index.php?title=Protocols/WebAPI/Auth/WebApp/getToken&amp;action=edit&amp;redlink=1" class="new" title="Protocols/WebAPI/Auth/WebApp/getToken (page does not exist)">getToken</a> or <a href="https://wiki.nina.chat/wiki/Protocols/WebAPI/Auth/Client" title="Protocols/WebAPI/Auth/Client">clientLogin</a>.
+</p><p>If end user interaction is required, a redirect URL is provide 
+that needs to be shown to the end user in a DHTML control (such as an 
+iframe). This redirection is to request the user's permission to access 
+their Buddy List.
+</p><p>If an iframe is used, the calling code can detect when the end 
+user has completed the interaction by looking for the #CONSENTDONE URL 
+fragment, which the iframe will add to the parent document. The 
+startSession call must be repeated at this point. If the end user does 
+not give permission, the iframe will add the URL fragment 
+#CONSENTCANCEL.
+</p><p>When using a token created with <a href="https://wiki.nina.chat/wiki/Protocols/WebAPI/Auth/Client" title="Protocols/WebAPI/Auth/Client">clientLogin</a> the startSession call must be signed. An example of how to calculate sig_sha256 can be found at <a rel="nofollow" class="external text" href="http://oauth.net/core/1.0/#sig_base_example">ClientLogin Example.</a> <i>URL signing requires the computers clock to be accurate or the use of hostTime returned by clientLogin, parameters must be in <a rel="nofollow" class="external text" href="http://oauth.net/core/1.0/#sig_norm_param">alphabetical order</a>, and <a rel="nofollow" class="external text" href="http://oauth.net/core/1.0/#encoding_parameters">percent-encoding</a> uses upper case characters.</i>
+</p><p>URL: GET <a rel="nofollow" class="external free" href="http://api.oscar.nina.bz/aim/startSession">http://api.oscar.nina.bz/aim/startSession</a>
+</p>
+<h3><span class="mw-headline" id="Input_Parameters">Input Parameters</span></h3>
+<table class="wikitable">
+<tbody><tr>
+<th>Type
+</th>
+<th>Field
+</th>
+<th>Description
+</th></tr>
+<tr>
+<td><a href="https://wiki.nina.chat/wiki/Protocols/WebAPI/Reference/Enumeration#Format" title="Protocols/WebAPI/Reference/Enumeration">Format</a>
+</td>
+<td>f
+</td>
+<td><i> [Required]</i> The format of the data returned
+</td></tr>
+<tr>
+<td>String
+</td>
+<td>c
+</td>
+<td>JSONP callback
+</td></tr>
+<tr>
+<td>String
+</td>
+<td>r
+</td>
+<td>Request id
+</td></tr>
+<tr>
+<td>String
+</td>
+<td>k
+</td>
+<td><i>[Required]</i> the AIM Web Key from <a rel="nofollow" class="external free" href="http://dev.nina.bz/aim">http://dev.nina.bz/aim</a> - use the same key for all calls
+</td></tr>
+<tr>
+<td>String
+</td>
+<td>a
+</td>
+<td><i>[Required]</i> Use an NINA Authentication Token for authentication, from the <a href="https://wiki.nina.chat/index.php?title=Protocols/WebAPI/Auth/WebApp/getToken&amp;action=edit&amp;redlink=1" class="new" title="Protocols/WebAPI/Auth/WebApp/getToken (page does not exist)">getToken</a> call
+</td></tr>
+<tr>
+<td><a href="https://wiki.nina.chat/wiki/Protocols/WebAPI/Reference/Enumeration#Event_Type" title="Protocols/WebAPI/Reference/Enumeration">Event Type</a>
+</td>
+<td>events
+</td>
+<td><i> [Required]</i> Comma separated list of events to subscribe to, <a class="mw-selflink-fragment" href="#fetchEvents">fetchEvents</a> will only return these events. The buddylist event triggers if the user will show up online to other folks or not.
+</td></tr>
+<tr>
+<td>Boolean
+</td>
+<td>encodeData
+</td>
+<td>Base 64 encode the data in imdata events
+</td></tr>
+<tr>
+<td><a href="https://wiki.nina.chat/wiki/Protocols/WebAPI/Reference/Types#Capability" title="Protocols/WebAPI/Reference/Types">Capability</a>
+</td>
+<td>assertCaps
+</td>
+<td>Comma separated list of capabilities to assert to other users and to receive from other users
+</td></tr>
+<tr>
+<td><a href="https://wiki.nina.chat/wiki/Protocols/WebAPI/Reference/Types#Capability" title="Protocols/WebAPI/Reference/Types">Capability</a>
+</td>
+<td>interestCaps
+</td>
+<td>Comma separated list of capabilities to ONLY receive from other users
+</td></tr>
+<tr>
+<td>Boolean
+</td>
+<td>anonymous
+</td>
+<td>Start an anonymous session
+</td></tr>
+<tr>
+<td>Boolean
+</td>
+<td>invisible
+</td>
+<td>Start an invisible session
+</td></tr>
+<tr>
+<td>String
+</td>
+<td>friendly
+</td>
+<td>For anonymous sessions, this is an optional friendly name to display
+</td></tr>
+<tr>
+<td>String
+</td>
+<td>language
+</td>
+<td>The language and locale to use in "&lt;lang&gt;-&lt;locale&gt;" 
+format. The lang is the 2 letter language code for I18N (default: en) 
+and the locale is the 2 letter Locale code for I18N (default: us). If 
+not passed in, the language will default to "en-us".
+</td></tr>
+<tr>
+<td>String
+</td>
+<td>clientName
+</td>
+<td>Client name - clientLogin parameter
+</td></tr>
+<tr>
+<td>Integer
+</td>
+<td>clientVersion
+</td>
+<td>Client version - clientLogin parameter
+</td></tr>
+<tr>
+<td>Integer
+</td>
+<td>ts
+</td>
+<td>Epoch timestamp - clientLogin required parameter
+</td></tr>
+<tr>
+<td>String
+</td>
+<td>sig_sha256
+</td>
+<td>Signature - clientLogin required parameter.
+</td></tr>
+<tr>
+<td>Boolean
+</td>
+<td>mobile
+</td>
+<td>Whether this is a mobile session.
+</td></tr>
+<tr>
+<td>Integer
+</td>
+<td>sessionTimeout
+</td>
+<td>Time in seconds before terminating idle web session.
+</td></tr>
+<tr>
+<td><a href="https://wiki.nina.chat/wiki/Protocols/WebAPI/Reference/Enumeration#Presence_State" title="Protocols/WebAPI/Reference/Enumeration">Presence State</a>
+</td>
+<td>view
+</td>
+<td>How we should appear to other users, offline and mobile are not valid in this case
+</td></tr></tbody></table>
+<h3><span class="mw-headline" id="Output_Fields">Output Fields</span></h3>
+<table class="wikitable">
+<tbody><tr>
+<th>Type
+</th>
+<th>Field
+</th>
+<th>Description
+</th></tr>
+<tr>
+<td>String
+</td>
+<td>fetchBaseURL
+</td>
+<td>Base URL to do fetches with, see <a class="mw-selflink-fragment" href="#fetchEvents">fetchEvents</a> method below
+</td></tr>
+<tr>
+<td>String
+</td>
+<td>aimsid
+</td>
+<td>The aimsid to use in other calls
+</td></tr>
+<tr>
+<td><a href="https://wiki.nina.chat/wiki/Protocols/WebAPI/Reference/Types#Presence" title="Protocols/WebAPI/Reference/Types">Presence</a>
+</td>
+<td>myInfo
+</td>
+<td>Presence object about logged in user
+</td></tr>
+<tr>
+<td>String
+</td>
+<td>creatorDisplayName
+</td>
+<td>For anonymous sessions, this is the display name to use for the widget creator
+</td></tr>
+<tr>
+<td>String
+</td>
+<td>widgetTitle
+</td>
+<td>For anonymous sessions, this is the widget title to use
+</td></tr>
+<tr>
+<td>String
+</td>
+<td>greetingMsg
+</td>
+<td>For anonymous sessions, this is the greeting msg to use
+</td></tr>
+<tr>
+<td>String
+</td>
+<td>offlineMsg
+</td>
+<td>For anonymous sessions, this is the offline msg to use
+</td></tr>
+<tr>
+<td>String
+</td>
+<td>cssURI
+</td>
+<td>For anonymous sessions, this is the css uri path
+</td></tr></tbody></table>
+<h3><span class="mw-headline" id="Common_Status_Codes">Common Status Codes</span></h3>
+<table class="wikitable">
+<tbody><tr>
+<th>Status Code
+</th>
+<th>Description
+</th></tr>
+<tr>
+<td>200
+</td>
+<td>Success
+</td></tr>
+<tr>
+<td>401
+</td>
+<td>Authorization required
+</td></tr>
+<tr>
+<td>408
+</td>
+<td>Timeout of the backend servers
+</td></tr>
+<tr>
+<td>450
+</td>
+<td>Consent required, use the redirectURL and append a k=KEY to it
+</td></tr>
+<tr>
+<td>460
+</td>
+<td>Missing required parameter
+</td></tr>
+<tr>
+<td>462
+</td>
+<td>Parameter error
+</td></tr>
+<tr>
+<td>607
+</td>
+<td>Rate limit signing on, wait a few minutes before trying again
+</td></tr></tbody></table>
+<h3><span class="mw-headline" id="Common_Status_Detail_Codes">Common Status Detail Codes</span></h3>
+<table class="wikitable">
+<tbody><tr>
+<th>Status Detail Code
+</th>
+<th>Description
+</th></tr>
+<tr>
+<td>1004
+</td>
+<td>Referer used to create token doesn't match referer of call
+</td></tr></tbody></table>
+<p><b>Example:</b> <a rel="nofollow" class="external free" href="http://api.oscar.nina.bz/aim/startSession?f=json&amp;k=KEY&amp;c=callback&amp;a=AOLAUTHTOKEN">http://api.oscar.nina.bz/aim/startSession?f=json&amp;k=KEY&amp;c=callback&amp;a=AOLAUTHTOKEN</a>
+</p>
+<h3><span class="mw-headline" id="Sample_JSON_Output">Sample JSON Output</span></h3>
+<pre>{"response":{
+    "statusCode":200,
+    "statusText":"Ok",
+    "requestId":"123",
+    "data":{
+      "fetchBaseURL":"http://10.10.10.10/aim/fetchEvents?seq=10",
+      "aimsid":"opaquedata",
+      "myInfo":{
+        "aimId":"chattingchuck",
+        "displayId":"ChattingChuck",
+        "friendly":"Chuck my Buddy",
+        "state":"away",
+        "onlineTime":100,
+        "awayTime":10,
+        "statusTime":100,
+        "awayMsg":"I'm busy right now chatting.",
+        "profileMsg":"My name is Chuck, and I live on AIM.",
+        "statusMsg":"Look at me!",
+        "buddyIcon":"",
+        "presenceIcon":"http://o.aolcdn.com/aim/img/away.gif",
+        "capabilities":[
+        "200A0000A28911D3A52D001083341CFA"
+        ],
+        "location":{
+          "desc":"AOL Office",
+          "street":"SULLY RD",
+          "city":"STERLING",
+          "country":"US",
+          "state":"VA",
+          "postcode":"20166",
+          "accuracy":"100",
+          "lat":"38.986750",
+          "lon":"-77.430500",
+          "accu_string":"Block1"
+        },
+        "ipCountry":"",
+        "smsSegment":{
+          "single":,
+          "initial":,
+          "trailing":
+        },
+        "userType":"aim"
+      },
+      "creatorDisplayName":"",
+      "widgetTitle":"",
+      "greetingMsg":"",
+      "offlineMsg":"",
+      "cssURI":""
+    }
+  }
+}
+</pre>
+<h3><span class="mw-headline" id="Sample_XML_Output">Sample XML Output</span></h3>
+<pre>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;response&gt;
+  &lt;statusCode&gt;200&lt;/statusCode&gt;
+  &lt;statusText&gt;Ok&lt;/statusText&gt;
+  &lt;requestId&gt;123&lt;/requestId&gt;
+  &lt;data&gt;
+    &lt;fetchBaseURL&gt;http://10.10.10.10/aim/fetchEvents?seq=10&lt;/fetchBaseURL&gt;
+    &lt;aimsid&gt;opaquedata&lt;/aimsid&gt;
+    &lt;myInfo&gt;
+      &lt;aimId&gt;chattingchuck&lt;/aimId&gt;
+      &lt;displayId&gt;ChattingChuck&lt;/displayId&gt;
+      &lt;friendly&gt;Chuck my Buddy&lt;/friendly&gt;
+      &lt;state&gt;away&lt;/state&gt;
+      &lt;onlineTime&gt;100&lt;/onlineTime&gt;
+      &lt;awayTime&gt;10&lt;/awayTime&gt;
+      &lt;statusTime&gt;100&lt;/statusTime&gt;
+      &lt;awayMsg&gt;I'm busy right now chatting.&lt;/awayMsg&gt;
+      &lt;profileMsg&gt;My name is Chuck, and I live on AIM.&lt;/profileMsg&gt;
+      &lt;statusMsg&gt;Look at me!&lt;/statusMsg&gt;
+      &lt;buddyIcon&gt;&lt;/buddyIcon&gt;
+      &lt;presenceIcon&gt;http://o.aolcdn.com/aim/img/away.gif&lt;/presenceIcon&gt;
+      &lt;capabilities&gt;
+      &lt;capability&gt;200A0000A28911D3A52D001083341CFA&lt;/capability&gt;
+      &lt;/capabilities&gt;
+      &lt;location&gt;
+        &lt;desc&gt;AOL Office&lt;/desc&gt;
+        &lt;street&gt;SULLY RD&lt;/street&gt;
+        &lt;city&gt;STERLING&lt;/city&gt;
+        &lt;country&gt;US&lt;/country&gt;
+        &lt;state&gt;VA&lt;/state&gt;
+        &lt;postcode&gt;20166&lt;/postcode&gt;
+        &lt;accuracy&gt;100&lt;/accuracy&gt;
+        &lt;lat&gt;38.986750&lt;/lat&gt;
+        &lt;lon&gt;-77.430500&lt;/lon&gt;
+        &lt;accu_string&gt;Block1&lt;/accu_string&gt;
+      &lt;/location&gt;
+      &lt;ipCountry&gt;&lt;/ipCountry&gt;
+      &lt;smsSegment&gt;
+        &lt;single&gt;&lt;/single&gt;
+        &lt;initial&gt;&lt;/initial&gt;
+        &lt;trailing&gt;&lt;/trailing&gt;
+      &lt;/smsSegment&gt;
+      &lt;userType&gt;aim&lt;/userType&gt;
+    &lt;/myInfo&gt;
+    &lt;creatorDisplayName&gt;&lt;/creatorDisplayName&gt;
+    &lt;widgetTitle&gt;&lt;/widgetTitle&gt;
+    &lt;greetingMsg&gt;&lt;/greetingMsg&gt;
+    &lt;offlineMsg&gt;&lt;/offlineMsg&gt;
+    &lt;cssURI&gt;&lt;/cssURI&gt;
+  &lt;/data&gt;
+&lt;/response&gt;
+</pre>
+<h2><span class="mw-headline" id="fetchEvents">fetchEvents</span></h2>
+<p>Fetch outstanding events for an <b>aimsid</b>, waiting up to <b>timeout</b>
+ milliseconds before returning. This URL is never formed on its own - 
+instead, the URL is created by taking the fetchBaseURL returned by <a class="mw-selflink-fragment" href="#startSession">startSession</a> or the last <a class="mw-selflink-fragment" href="#fetchEvents">fetchEvents</a> call, appending the required format parameter, and then optionally appending a requestId or callback parameters.
+</p><p>Appending the <b>aimsid</b> is not necessary; the API 
+automatically adds it to the fetchBaseURL as the first parameter. The 
+client should wait at least timeToNextFetch milliseconds between calls 
+and make sure to use the new fetchBaseURL returned for the next call. 
+Using an old fetchBaseURL will cause previous events to be repeated. A 
+session will be timed out if there isn't an active fetchEvents for more 
+then 30 seconds.
+</p>
+<h3><span class="mw-headline" id="Input_Parameters_2">Input Parameters</span></h3>
+<table class="wikitable">
+<tbody><tr>
+<th>Type
+</th>
+<th>Field
+</th>
+<th>Description
+</th></tr>
+<tr>
+<td><a href="https://wiki.nina.chat/wiki/Protocols/WebAPI/Reference/Enumeration#Format" title="Protocols/WebAPI/Reference/Enumeration">Format</a>
+</td>
+<td>f
+</td>
+<td><i> [Required]</i> The format of the data returned
+</td></tr>
+<tr>
+<td>String
+</td>
+<td>c
+</td>
+<td>JSONP callback
+</td></tr>
+<tr>
+<td>String
+</td>
+<td>r
+</td>
+<td>Request id
+</td></tr>
+<tr>
+<td>String
+</td>
+<td>aimsid
+</td>
+<td><i>[Required]</i> Use an AIM Session Id from the <a class="mw-selflink-fragment" href="#startSession">startSession</a> call for authentication
+</td></tr>
+<tr>
+<td>Integer
+</td>
+<td>timeout
+</td>
+<td><i>[Default 1 hour]</i> Timeout in milliseconds that the server will
+ wait before returning. Minimum 500ms, maximum 1 hour. On timeout the 
+server will still respond, there will be no events however. <i>For a web application this must be set.</i>
+</td></tr>
+<tr>
+<td>Boolean
+</td>
+<td>peek
+</td>
+<td>If true, then this fetch will not update the most recent seqNum returned
+</td></tr></tbody></table>
+<h3><span class="mw-headline" id="Output_Fields_2">Output Fields</span></h3>
+<table class="wikitable">
+<tbody><tr>
+<th>Type
+</th>
+<th>Field
+</th>
+<th>Description
+</th></tr>
+<tr>
+<td>Integer
+</td>
+<td>timeToNextFetch
+</td>
+<td>Milliseconds to wait before doing the next event fetch
+</td></tr>
+<tr>
+<td>String
+</td>
+<td>fetchBaseURL
+</td>
+<td>Base URL to do next fetch with
+</td></tr>
+<tr>
+<td><i>Array of</i> <a href="https://wiki.nina.chat/wiki/Protocols/WebAPI/Reference/Types#Event" title="Protocols/WebAPI/Reference/Types">Event</a>
+</td>
+<td>events
+</td>
+<td>Events that occured between the last fetch and now, can be empty on timeout
+</td></tr></tbody></table>
+<h3><span class="mw-headline" id="Common_Status_Codes_2">Common Status Codes</span></h3>
+<table class="wikitable">
+<tbody><tr>
+<th>Status Code
+</th>
+<th>Description
+</th></tr>
+<tr>
+<td>200
+</td>
+<td>Success
+</td></tr>
+<tr>
+<td>401
+</td>
+<td>Authorization required
+</td></tr>
+<tr>
+<td>460
+</td>
+<td>Missing required parameter
+</td></tr>
+<tr>
+<td>462
+</td>
+<td>Parameter error
+</td></tr></tbody></table>
+<h3><span class="mw-headline" id="Sample_JSON_Output_2">Sample JSON Output</span></h3>
+<pre>{"response":{
+    "statusCode":200,
+    "statusText":"Ok",
+    "requestId":"123",
+    "data":{
+      "timeToNextFetch":500,
+      "fetchBaseURL":"http://10.10.10.10/aim/fetchEvents?seq=11",
+      "events":[{
+        "type":"sessionEnded",
+        "eventData":"",
+        "seqNum":
+      }]
+    }
+  }
+}
+</pre>
+<h3><span class="mw-headline" id="Sample_XML_Output_2">Sample XML Output</span></h3>
+<pre>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;response&gt;
+  &lt;statusCode&gt;200&lt;/statusCode&gt;
+  &lt;statusText&gt;Ok&lt;/statusText&gt;
+  &lt;requestId&gt;123&lt;/requestId&gt;
+  &lt;data&gt;
+    &lt;timeToNextFetch&gt;500&lt;/timeToNextFetch&gt;
+    &lt;fetchBaseURL&gt;http://10.10.10.10/aim/fetchEvents?seq=11&lt;/fetchBaseURL&gt;
+    &lt;events&gt;
+    &lt;event&gt;
+      &lt;type&gt;sessionEnded&lt;/type&gt;
+      &lt;eventData&gt;&lt;/eventData&gt;
+      &lt;seqNum&gt;&lt;/seqNum&gt;
+    &lt;/event&gt;
+    &lt;/events&gt;
+  &lt;/data&gt;
+&lt;/response&gt;
+</pre>
+<h2><span class="mw-headline" id="deleteEvents">deleteEvents</span></h2>
+<p>To delete multiple events
+</p><p>URL: GET <a rel="nofollow" class="external free" href="http://api.oscar.nina.bz/aim/deleteEvents">http://api.oscar.nina.bz/aim/deleteEvents</a>
+</p>
+<h3><span class="mw-headline" id="Input_Parameters_3">Input Parameters</span></h3>
+<table class="wikitable">
+<tbody><tr>
+<th>Type
+</th>
+<th>Field
+</th>
+<th>Description
+</th></tr>
+<tr>
+<td><a href="https://wiki.nina.chat/wiki/Protocols/WebAPI/Reference/Enumeration#Format" title="Protocols/WebAPI/Reference/Enumeration">Format</a>
+</td>
+<td>f
+</td>
+<td><i> [Required]</i> The format of the data returned
+</td></tr>
+<tr>
+<td>String
+</td>
+<td>c
+</td>
+<td>JSONP callback
+</td></tr>
+<tr>
+<td>String
+</td>
+<td>r
+</td>
+<td>Request id
+</td></tr>
+<tr>
+<td>String
+</td>
+<td>aimsid
+</td>
+<td><i>[Required]</i> Use an AIM Session Id from the <a class="mw-selflink-fragment" href="#startSession">startSession</a> call for authentication
+</td></tr>
+<tr>
+<td>Integer
+</td>
+<td>eventNumber
+</td>
+<td><i>[Required]</i> event numbers to delete. Multiple allowed.
+</td></tr></tbody></table>
+<h3><span class="mw-headline" id="Output_Fields_3">Output Fields</span></h3>
+<table class="wikitable">
+<tbody><tr>
+<th>Type
+</th>
+<th>Field
+</th>
+<th>Description
+</th></tr>
+<tr>
+<td><i>Array of</i> <a href="https://wiki.nina.chat/wiki/Protocols/WebAPI/Reference/Types#EventStatus" title="Protocols/WebAPI/Reference/Types">EventStatus</a>
+</td>
+<td>results
+</td>
+<td>Events response status
+</td></tr></tbody></table>
+<h3><span class="mw-headline" id="Common_Status_Codes_3">Common Status Codes</span></h3>
+<table class="wikitable">
+<tbody><tr>
+<th>Status Code
+</th>
+<th>Description
+</th></tr>
+<tr>
+<td>200
+</td>
+<td>Success
+</td></tr>
+<tr>
+<td>401
+</td>
+<td>Authorization required
+</td></tr>
+<tr>
+<td>460
+</td>
+<td>Missing required parameter
+</td></tr>
+<tr>
+<td>462
+</td>
+<td>Parameter error
+</td></tr></tbody></table>
+<p><b>Example:</b> <a rel="nofollow" class="external free" href="http://api.oscar.nina.bz/aim/deleteEvents?f=json&amp;aimsid=AIMSID&amp;eventNumber=1&amp;eventNumber=2">http://api.oscar.nina.bz/aim/deleteEvents?f=json&amp;aimsid=AIMSID&amp;eventNumber=1&amp;eventNumber=2</a>
+</p>
+<h3><span class="mw-headline" id="Sample_JSON_Output_3">Sample JSON Output</span></h3>
+<pre>{"response":{
+    "statusCode":200,
+    "statusText":"Ok",
+    "requestId":"123",
+    "data":{
+      "results":[
+      {
+        "event":7,
+        "code":0
+      }
+      ]
+    }
+  }
+}
+</pre>
+<h3><span class="mw-headline" id="Sample_XML_Output_3">Sample XML Output</span></h3>
+<pre>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;response&gt;
+  &lt;statusCode&gt;200&lt;/statusCode&gt;
+  &lt;statusText&gt;Ok&lt;/statusText&gt;
+  &lt;requestId&gt;123&lt;/requestId&gt;
+  &lt;data&gt;
+    &lt;results&gt;
+    &lt;eventStatus&gt;
+      &lt;event&gt;7&lt;/event&gt;
+      &lt;code&gt;0&lt;/code&gt;
+    &lt;/eventStatus&gt;
+    &lt;/results&gt;
+  &lt;/data&gt;
+&lt;/response&gt;
+</pre>
+<h2><span class="mw-headline" id="endSession">endSession</span></h2>
+<p>To be used when the user logs out or navigates away from the 
+application, endSession ends an Web AIM session and set this session 
+offline. A sessionEnded event will be generated after the last event is 
+retrieved, so the client knows when to stop fetching events. If there 
+isn't a active <a class="mw-selflink-fragment" href="#fetchEvents">fetchEvents</a> for more then 30 seconds, the backend will auto end the session.
+</p><p>URL: GET <a rel="nofollow" class="external free" href="http://api.oscar.nina.bz/aim/endSession">http://api.oscar.nina.bz/aim/endSession</a>
+</p>
+<h3><span class="mw-headline" id="Input_Parameters_4">Input Parameters</span></h3>
+<table class="wikitable">
+<tbody><tr>
+<th>Type
+</th>
+<th>Field
+</th>
+<th>Description
+</th></tr>
+<tr>
+<td><a href="https://wiki.nina.chat/wiki/Protocols/WebAPI/Reference/Enumeration#Format" title="Protocols/WebAPI/Reference/Enumeration">Format</a>
+</td>
+<td>f
+</td>
+<td><i> [Required]</i> The format of the data returned
+</td></tr>
+<tr>
+<td>String
+</td>
+<td>c
+</td>
+<td>JSONP callback
+</td></tr>
+<tr>
+<td>String
+</td>
+<td>r
+</td>
+<td>Request id
+</td></tr>
+<tr>
+<td>String
+</td>
+<td>aimsid
+</td>
+<td><i>[Required]</i> Use an AIM Session Id from the <a class="mw-selflink-fragment" href="#startSession">startSession</a> call for authentication
+</td></tr></tbody></table>
+<h3><span class="mw-headline" id="Common_Status_Codes_4">Common Status Codes</span></h3>
+<table class="wikitable">
+<tbody><tr>
+<th>Status Code
+</th>
+<th>Description
+</th></tr>
+<tr>
+<td>200
+</td>
+<td>Success
+</td></tr>
+<tr>
+<td>401
+</td>
+<td>Authorization required
+</td></tr>
+<tr>
+<td>460
+</td>
+<td>Missing required parameter
+</td></tr>
+<tr>
+<td>462
+</td>
+<td>Parameter error
+</td></tr></tbody></table>
+<p><b>Example:</b> <a rel="nofollow" class="external free" href="http://api.oscar.nina.bz/aim/endSession?f=json&amp;k=MYKEY&amp;c=callback&amp;aimsid=AIMSID">http://api.oscar.nina.bz/aim/endSession?f=json&amp;k=MYKEY&amp;c=callback&amp;aimsid=AIMSID</a>
+</p>
+<h3><span class="mw-headline" id="Sample_JSON_Output_4">Sample JSON Output</span></h3>
+<pre>{"response":{
+    "statusCode":200,
+    "statusText":"Ok",
+    "requestId":"123",
+    "data":{
+    }
+  }
+}
+</pre>
+<h3><span class="mw-headline" id="Sample_XML_Output_4">Sample XML Output</span></h3>
+<pre>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;response&gt;
+  &lt;statusCode&gt;200&lt;/statusCode&gt;
+  &lt;statusText&gt;Ok&lt;/statusText&gt;
+  &lt;requestId&gt;123&lt;/requestId&gt;
+  &lt;data&gt;
+  &lt;/data&gt;
+&lt;/response&gt;
+</pre>
+<h2><span class="mw-headline" id="startOSCARSession">startOSCARSession</span></h2>
+<p>Start a OSCAR AIM session. This API requires that the token came from a previous <a href="https://wiki.nina.chat/wiki/Protocols/WebAPI/Auth/Client" title="Protocols/WebAPI/Auth/Client">clientLogin</a> call and that the URL is signed. For a complete example on using startOSCARSession see the <a href="https://wiki.nina.chat/wiki/Protocols/OSCAR/Sign_On#clientLogin" title="Protocols/OSCAR/Sign On">OSCAR Protocol Signon Example</a>. <i>URL signing requires the computers clock to be accurate or the use of hostTime returned by clientLogin, parameters must be in <a rel="nofollow" class="external text" href="http://oauth.net/core/1.0/#sig_norm_param">alphabetical order</a>, and <a rel="nofollow" class="external text" href="http://oauth.net/core/1.0/#encoding_parameters">percent-encoding</a> uses upper case characters.</i>
+</p><p>URL: GET <a rel="nofollow" class="external free" href="http://api.oscar.nina.bz/aim/startOSCARSession">http://api.oscar.nina.bz/aim/startOSCARSession</a>
+</p>
+<h3><span class="mw-headline" id="Input_Parameters_5">Input Parameters</span></h3>
+<table class="wikitable">
+<tbody><tr>
+<th>Type
+</th>
+<th>Field
+</th>
+<th>Description
+</th></tr>
+<tr>
+<td><a href="https://wiki.nina.chat/wiki/Protocols/WebAPI/Reference/Enumeration#Format" title="Protocols/WebAPI/Reference/Enumeration">Format</a>
+</td>
+<td>f
+</td>
+<td><i> [Required]</i> The format of the data returned
+</td></tr>
+<tr>
+<td>String
+</td>
+<td>c
+</td>
+<td>JSONP callback
+</td></tr>
+<tr>
+<td>String
+</td>
+<td>r
+</td>
+<td>Request id
+</td></tr>
+<tr>
+<td>String
+</td>
+<td>k
+</td>
+<td><i>[Required]</i> the AIM Web Key from <a rel="nofollow" class="external free" href="http://dev.nina.bz/aim">http://dev.nina.bz/aim</a> - use the same key for all calls
+</td></tr>
+<tr>
+<td>String
+</td>
+<td>a
+</td>
+<td><i>[Required]</i> Use an NINA Authentication Token for authentication, from the <a href="https://wiki.nina.chat/index.php?title=Protocols/WebAPI/Auth/WebApp/getToken&amp;action=edit&amp;redlink=1" class="new" title="Protocols/WebAPI/Auth/WebApp/getToken (page does not exist)">getToken</a> call
+</td></tr>
+<tr>
+<td>Boolean
+</td>
+<td>useTLS
+</td>
+<td>Request the connection to BOSS use TLS
+</td></tr>
+<tr>
+<td>String
+</td>
+<td>clientName
+</td>
+<td>Client name - clientLogin parameter
+</td></tr>
+<tr>
+<td>Integer
+</td>
+<td>clientVersion
+</td>
+<td>Client version - clientLogin parameter
+</td></tr>
+<tr>
+<td>String
+</td>
+<td>language
+</td>
+<td>the required language and locale of the error/status messages. This 
+is always in "&lt;lang&gt;-&lt;locale&gt;" format. The lang is the 2 
+letter language code for I18N (default: en) and the locale is the 2 
+letter Locale code for I18N (default: us). If not passed in, the 
+language will be extracted from HTTP header (Accept-Language) and if 
+that is not available will default to "en-us".
+</td></tr>
+<tr>
+<td>Integer
+</td>
+<td>ts
+</td>
+<td><i>[Required]</i> Epoch timestamp - clientLogin required parameter
+</td></tr>
+<tr>
+<td>String
+</td>
+<td>sig_sha256
+</td>
+<td><i>[Required]</i> Signature - clientLogin required parameter.
+</td></tr></tbody></table>
+<h3><span class="mw-headline" id="Output_Fields_4">Output Fields</span></h3>
+<table class="wikitable">
+<tbody><tr>
+<th>Type
+</th>
+<th>Field
+</th>
+<th>Description
+</th></tr>
+<tr>
+<td>String
+</td>
+<td>host
+</td>
+<td>Host to connect to
+</td></tr>
+<tr>
+<td>String
+</td>
+<td>port
+</td>
+<td>Port to connect to
+</td></tr>
+<tr>
+<td>String
+</td>
+<td>cookie
+</td>
+<td>Binary cookie to present to BOSS
+</td></tr>
+<tr>
+<td>String
+</td>
+<td>tlsCertName
+</td>
+<td>If TLS is being used then this is the cert name to verify for the boss connection
+</td></tr></tbody></table>
+<h3><span class="mw-headline" id="Common_Status_Codes_5">Common Status Codes</span></h3>
+<table class="wikitable">
+<tbody><tr>
+<th>Status Code
+</th>
+<th>Description
+</th></tr>
+<tr>
+<td>200
+</td>
+<td>Success
+</td></tr>
+<tr>
+<td>401
+</td>
+<td>Authorization required
+</td></tr>
+<tr>
+<td>408
+</td>
+<td>Timeout of the backend servers
+</td></tr>
+<tr>
+<td>460
+</td>
+<td>Missing required parameter
+</td></tr>
+<tr>
+<td>462
+</td>
+<td>Parameter error
+</td></tr>
+<tr>
+<td>607
+</td>
+<td>Rate limit signing on, wait a few minutes before trying again
+</td></tr></tbody></table>
+<h3><span class="mw-headline" id="Common_Status_Detail_Codes_2">Common Status Detail Codes</span></h3>
+<table class="wikitable">
+<tbody><tr>
+<th>Status Detail Code
+</th>
+<th>Description
+</th></tr>
+<tr>
+<td>1004
+</td>
+<td>Referer used to create token doesn't match referer of call
+</td></tr></tbody></table>
+<h3><span class="mw-headline" id="Sample_JSON_Output_5">Sample JSON Output</span></h3>
+<pre>{"response":{
+    "statusCode":200,
+    "statusText":"Ok",
+    "requestId":"123",
+    "data":{
+      "host":"10.1.2.3",
+      "port":"5190",
+      "cookie":"base64ed data",
+      "tlsCertName":"bos.oscar.nina.bz"
+    }
+  }
+}
+</pre>
+<h3><span class="mw-headline" id="Sample_XML_Output_5">Sample XML Output</span></h3>
+<pre>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;response&gt;
+  &lt;statusCode&gt;200&lt;/statusCode&gt;
+  &lt;statusText&gt;Ok&lt;/statusText&gt;
+  &lt;requestId&gt;123&lt;/requestId&gt;
+  &lt;data&gt;
+    &lt;host&gt;10.1.2.3&lt;/host&gt;
+    &lt;port&gt;5190&lt;/port&gt;
+    &lt;cookie&gt;base64ed data&lt;/cookie&gt;
+    &lt;tlsCertName&gt;bos.oscar.nina.bz&lt;/tlsCertName&gt;
+  &lt;/data&gt;
+&lt;/response&gt;
+</pre>
+<!-- 
+NewPP limit report
+Cached time: 20240801094315
+Cache expiry: 86400
+Reduced expiry: false
+Complications: [show‐toc]
+CPU time usage: 0.028 seconds
+Real time usage: 0.034 seconds
+Preprocessor visited node count: 174/1000000
+Post‐expand include size: 1241/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 2/100
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 6061/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    1.254      1 Template:Protocols/WebAPI
+100.00%    1.254      1 -total
+-->
+
+<!-- Saved in parser cache with key wiki-wiki_:pcache:idhash:1297-0!canonical and timestamp 20240801094315 and revision id 1967. Rendering was triggered because: page-view
+ -->
+</div>
+<div class="printfooter" data-nosnippet="">Retrieved from "<a dir="ltr" href="https://wiki.nina.chat/index.php?title=Protocols/WebAPI/Reference/Methods/Session&amp;oldid=1967">https://wiki.nina.chat/index.php?title=Protocols/WebAPI/Reference/Methods/Session&amp;oldid=1967</a>"</div></div>
+		<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="https://wiki.nina.chat/wiki/Special:Categories" title="Special:Categories">Categories</a>: <ul><li><a href="https://wiki.nina.chat/index.php?title=Category:Stub&amp;action=edit&amp;redlink=1" class="new" title="Category:Stub (page does not exist)">Stub</a></li><li><a href="https://wiki.nina.chat/wiki/Category:AOL" title="Category:AOL">AOL</a></li><li><a href="https://wiki.nina.chat/index.php?title=Category:AIM&amp;action=edit&amp;redlink=1" class="new" title="Category:AIM (page does not exist)">AIM</a></li><li><a href="https://wiki.nina.chat/index.php?title=Category:Protocols/WebAPI&amp;action=edit&amp;redlink=1" class="new" title="Category:Protocols/WebAPI (page does not exist)">Protocols/WebAPI</a></li><li><a href="https://wiki.nina.chat/index.php?title=Category:Protocols/WebAPI/Reference&amp;action=edit&amp;redlink=1" class="new" title="Category:Protocols/WebAPI/Reference (page does not exist)">Protocols/WebAPI/Reference</a></li><li><a href="https://wiki.nina.chat/wiki/Category:Work_In_Progress" title="Category:Work In Progress">Work In Progress</a></li></ul></div></div>
+	</div>
+</div>
+
+<div id="mw-navigation">
+	<h2>Navigation menu</h2>
+	<div id="mw-head">
+		
+<nav id="p-personal" class="vector-menu mw-portlet mw-portlet-personal vector-user-menu-legacy" aria-labelledby="p-personal-label" role="navigation">
+	<h3 id="p-personal-label" class="vector-menu-heading ">
+		<span class="vector-menu-heading-label">Personal tools</span>
+	</h3>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="pt-login" class="mw-list-item"><a href="https://wiki.nina.chat/index.php?title=Special:UserLogin&amp;returnto=Protocols%2FWebAPI%2FReference%2FMethods%2FSession" title="You are encouraged to log in; however, it is not mandatory [Alt+Shift+o]" accesskey="o"><span>Log in</span></a></li>
+		</ul>
+		
+	</div>
+</nav>
+
+		<div id="left-navigation">
+			
+<nav id="p-namespaces" class="vector-menu mw-portlet mw-portlet-namespaces vector-menu-tabs vector-menu-tabs-legacy" aria-labelledby="p-namespaces-label" role="navigation">
+	<h3 id="p-namespaces-label" class="vector-menu-heading ">
+		<span class="vector-menu-heading-label">Namespaces</span>
+	</h3>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="ca-nstab-main" class="selected mw-list-item"><a href="https://wiki.nina.chat/wiki/Protocols/WebAPI/Reference/Methods/Session" title="View the content page [Alt+Shift+c]" accesskey="c"><span>Page</span></a></li><li id="ca-talk" class="new mw-list-item"><a href="https://wiki.nina.chat/index.php?title=Talk:Protocols/WebAPI/Reference/Methods/Session&amp;action=edit&amp;redlink=1" rel="discussion" title="Discussion about the content page (page does not exist) [Alt+Shift+t]" accesskey="t"><span>Discussion</span></a></li>
+		</ul>
+		
+	</div>
+</nav>
+
+			
+<nav id="p-variants" class="vector-menu mw-portlet mw-portlet-variants emptyPortlet vector-menu-dropdown" aria-labelledby="p-variants-label" role="navigation">
+	<input type="checkbox" id="p-variants-checkbox" role="button" aria-haspopup="true" data-event-name="ui.dropdown-p-variants" class="vector-menu-checkbox" aria-labelledby="p-variants-label">
+	<label id="p-variants-label" class="vector-menu-heading ">
+		<span class="vector-menu-heading-label">English</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			
+		</ul>
+		
+	</div>
+</nav>
+
+		</div>
+		<div id="right-navigation">
+			
+<nav id="p-views" class="vector-menu mw-portlet mw-portlet-views vector-menu-tabs vector-menu-tabs-legacy" aria-labelledby="p-views-label" role="navigation">
+	<h3 id="p-views-label" class="vector-menu-heading ">
+		<span class="vector-menu-heading-label">Views</span>
+	</h3>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="ca-view" class="selected mw-list-item collapsible"><a href="https://wiki.nina.chat/wiki/Protocols/WebAPI/Reference/Methods/Session"><span>Read</span></a></li><li id="ca-viewsource" class="mw-list-item collapsible"><a href="https://wiki.nina.chat/index.php?title=Protocols/WebAPI/Reference/Methods/Session&amp;action=edit" title="This page is protected.
+You can view its source [Alt+Shift+e]" accesskey="e"><span>View source</span></a></li><li id="ca-history" class="mw-list-item collapsible"><a href="https://wiki.nina.chat/index.php?title=Protocols/WebAPI/Reference/Methods/Session&amp;action=history" title="Past revisions of this page [Alt+Shift+h]" accesskey="h"><span>View history</span></a></li>
+		</ul>
+		
+	</div>
+</nav>
+
+			
+<nav id="p-cactions" class="vector-menu mw-portlet mw-portlet-cactions emptyPortlet vector-menu-dropdown" aria-labelledby="p-cactions-label" role="navigation" title="More options">
+	<input type="checkbox" id="p-cactions-checkbox" role="button" aria-haspopup="true" data-event-name="ui.dropdown-p-cactions" class="vector-menu-checkbox" aria-labelledby="p-cactions-label">
+	<label id="p-cactions-label" class="vector-menu-heading ">
+		<span class="vector-menu-heading-label">More</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			
+		</ul>
+		
+	</div>
+</nav>
+
+			
+<div id="p-search" role="search" class="vector-search-box-vue  vector-search-box-show-thumbnail vector-search-box-auto-expand-width vector-search-box">
+	<h3>Search</h3>
+	<form action="/index.php" id="searchform" class="vector-search-box-form">
+		<div id="simpleSearch" class="vector-search-box-inner" data-search-loc="header-navigation">
+			<input class="vector-search-box-input" type="search" name="search" placeholder="Search NINA Wiki" aria-label="Search NINA Wiki" autocapitalize="sentences" title="Search NINA Wiki [Alt+Shift+f]" accesskey="f" id="searchInput">
+			<input type="hidden" name="title" value="Special:Search">
+			<input id="mw-searchButton" class="searchButton mw-fallbackSearchButton" type="submit" name="fulltext" title="Search the pages for this text" value="Search">
+			<input id="searchButton" class="searchButton" type="submit" name="go" title="Go to a page with this exact name if it exists" value="Go">
+		</div>
+	</form>
+</div>
+
+		</div>
+	</div>
+	
+<div id="mw-panel" class="vector-legacy-sidebar" style="height: auto !important;">
+	<div id="p-logo" role="banner">
+		<a class="mw-wiki-logo" href="https://wiki.nina.chat/wiki/Main_Page" title="Visit the main page"></a>
+	</div>
+	
+<nav id="p-navigation" class="vector-menu mw-portlet mw-portlet-navigation vector-menu-portal portal" aria-labelledby="p-navigation-label" role="navigation">
+	<h3 id="p-navigation-label" class="vector-menu-heading ">
+		<span class="vector-menu-heading-label">Navigation</span>
+	</h3>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="n-mainpage-description" class="mw-list-item"><a href="https://wiki.nina.chat/wiki/Main_Page" title="Visit the main page [Alt+Shift+z]" accesskey="z"><span>Main page</span></a></li><li id="n-recentchanges" class="mw-list-item"><a href="https://wiki.nina.chat/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [Alt+Shift+r]" accesskey="r"><span>Recent changes</span></a></li><li id="n-randompage" class="mw-list-item"><a href="https://wiki.nina.chat/wiki/Special:Random" title="Load a random page [Alt+Shift+x]" accesskey="x"><span>Random page</span></a></li><li id="n-help-mediawiki" class="mw-list-item"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Contents"><span>Help about MediaWiki</span></a></li>
+		</ul>
+		
+	</div>
+</nav>
+
+	
+<nav id="p-tb" class="vector-menu mw-portlet mw-portlet-tb vector-menu-portal portal" aria-labelledby="p-tb-label" role="navigation" style="height: auto !important;">
+	<h3 id="p-tb-label" class="vector-menu-heading ">
+		<span class="vector-menu-heading-label">Tools</span>
+	</h3>
+	<div class="vector-menu-content" style="height: auto !important;">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="t-whatlinkshere" class="mw-list-item"><a href="https://wiki.nina.chat/wiki/Special:WhatLinksHere/Protocols/WebAPI/Reference/Methods/Session" title="A list of all wiki pages that link here [Alt+Shift+j]" accesskey="j"><span>What links here</span></a></li><li id="t-recentchangeslinked" class="mw-list-item"><a href="https://wiki.nina.chat/wiki/Special:RecentChangesLinked/Protocols/WebAPI/Reference/Methods/Session" rel="nofollow" title="Recent changes in pages linked from this page [Alt+Shift+k]" accesskey="k"><span>Related changes</span></a></li><li id="t-specialpages" class="mw-list-item"><a href="https://wiki.nina.chat/wiki/Special:SpecialPages" title="A list of all special pages [Alt+Shift+q]" accesskey="q"><span>Special pages</span></a></li><li id="t-print" class="mw-list-item"><a href="javascript:print();" rel="alternate" title="Printable version of this page [Alt+Shift+p]" accesskey="p"><span>Printable version</span></a></li><li id="t-permalink" class="mw-list-item"><a href="https://wiki.nina.chat/index.php?title=Protocols/WebAPI/Reference/Methods/Session&amp;oldid=1967#fetchEvents" title="Permanent link to this revision of this page"><span>Permanent link</span></a></li><li id="t-info" class="mw-list-item"><a href="https://wiki.nina.chat/index.php?title=Protocols/WebAPI/Reference/Methods/Session&amp;action=info" title="More information about this page"><span>Page information</span></a></li>
+		</ul>
+		<div class="after-portlet after-portlet-tb" style="height: auto !important;"><div class="portal" role="navigation" id="p-ads" aria-labelledby="p-ads-label" style="height: auto !important;">
+                                                <h6 style="font-size: 0.8rem;" id="p-ads-label">Please consider <a href="https://nina.chat/donate/">donating</a> if this Wiki was useful, we really appreciate it</h6>
+                                                <div class="body">
+<script async="" src="Protocols_WebAPI_Reference_Methods_Session%20-%20NINA%20Wiki_files/f_002.txt"></script>
+<!-- NINA (Wiki Sidemenu) -->
+<ins class="adsbygoogle" style="display: block; height: 600px;" data-ad-client="ca-pub-5399763425344945" data-ad-slot="8443447710" data-ad-format="auto" data-full-width-responsive="true" data-adsbygoogle-status="done" data-ad-status="unfilled"><div id="aswift_1_host" style="border: medium none; height: 600px; width: 131px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: inline-block; overflow: visible;"><iframe id="aswift_1" name="aswift_1" style="left:0;position:absolute;top:0;border:0;width:131px;height:600px;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" src="Protocols_WebAPI_Reference_Methods_Session%20-%20NINA%20Wiki_files/ads.htm" data-google-container-id="a!2" tabindex="0" title="Advertisement" aria-label="Advertisement" data-load-complete="true" width="131" height="600" frameborder="0"></iframe></div></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+                                                </div>
+                                        </div></div>
+	</div>
+</nav>
+
+	
+</div>
+
+</div>
+
+<footer id="footer" class="mw-footer" role="contentinfo">
+	<ul id="footer-info">
+	<li id="footer-info-lastmod"> This page was last edited on 26 March 2020, at 06:49.</li>
+</ul>
+
+	<ul id="footer-places">
+	<li id="footer-places-privacy"><a href="https://wiki.nina.chat/wiki/NINA_Wiki:Privacy_policy">Privacy policy</a></li>
+	<li id="footer-places-about"><a href="https://wiki.nina.chat/wiki/NINA_Wiki:About">About NINA Wiki</a></li>
+	<li id="footer-places-disclaimers"><a href="https://wiki.nina.chat/wiki/NINA_Wiki:General_disclaimer">Disclaimers</a></li>
+</ul>
+
+	<ul id="footer-icons" class="noprint">
+	<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img src="Protocols_WebAPI_Reference_Methods_Session%20-%20NINA%20Wiki_files/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="Protocols_WebAPI_Reference_Methods_Session%20-%20NINA%20Wiki_files/poweredby_mediawiki_132x47.png 1.5x, Protocols_WebAPI_Reference_Methods_Session%20-%20NINA%20Wiki_files/poweredby_mediawiki_176x62.png 2x" loading="lazy" width="88" height="31"></a></li>
+</ul>
+
+</footer>
+
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":106,"wgPageParseReport":{"limitreport":{"cputime":"0.028","walltime":"0.034","ppvisitednodes":{"value":174,"limit":1000000},"postexpandincludesize":{"value":1241,"limit":2097152},"templateargumentsize":{"value":0,"limit":2097152},"expansiondepth":{"value":2,"limit":100},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":6061,"limit":5000000},"timingprofile":["100.00%    1.254      1 Template:Protocols/WebAPI","100.00%    1.254      1 -total"]},"cachereport":{"timestamp":"20240801094315","ttl":86400,"transientcontent":false}}});});</script>
+
+<ins class="adsbygoogle adsbygoogle-noablate" style="display: none !important;" data-adsbygoogle-status="done" data-ad-status="unfilled"><div id="aswift_0_host" style="border: medium none; height: 0px; width: 0px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: inline-block;"><iframe id="aswift_0" name="aswift_0" style="left:0;position:absolute;top:0;border:0;width:undefinedpx;height:undefinedpx;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" src="Protocols_WebAPI_Reference_Methods_Session%20-%20NINA%20Wiki_files/ads_002.htm" data-google-container-id="a!1" tabindex="0" title="Advertisement" aria-label="Advertisement" data-load-complete="true" frameborder="0"></iframe></div></ins><div id="mw-teleport-target" class="vector-body"></div></body><iframe id="google_esf" name="google_esf" src="Protocols_WebAPI_Reference_Methods_Session%20-%20NINA%20Wiki_files/zrt_lookup_fy2021.htm" style="display: none;"></iframe></html>

@@ -1,0 +1,68 @@
+.loginpage{
+	text-align:center;
+	width:30%;
+	font-family: 'Tahoma';
+}
+
+.scene{
+	font-family: 'Tahoma';
+}
+
+.buddylist{
+	float:right;
+	background-color:#FFF;
+	filter: drop-shadow(0 0 0.75rem black);
+	width:200px;
+	height:300px;
+	padding:0;
+	margin:0;
+}
+
+.buddylist-header{
+	background-color:#CECECE;
+	margin-top:-11%;
+}
+
+.buddylist-list{
+	height:70%;
+	overflow-y: scroll;
+}
+
+.msg{
+	height:70%;
+	overflow-y: scroll;
+}
+
+.buddylist-bottom{
+	height:10%;
+	background-color:#f5f5f5;
+}
+
+.buddylist-bottom-status{
+	height:100%;
+	width:30px;
+	float:right;
+	border:1px solid grey;
+}
+
+.imscene{
+	font-family: 'Tahoma';
+	float:right;
+	background-color:#FFF;
+	height:300px;
+	width:400px;
+	padding:0;
+	margin:0;
+}
+
+.imscene-header{
+	background-color:#CECECE;
+}
+
+.imscene-bottom-input{
+	width:80%;
+}
+
+.imscene-bottom-button{
+	width:15%;
+}

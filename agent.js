@@ -83,7 +83,7 @@ async function afetchEvents(){
                   appendConvo(currentConversation, eventItem.eventData.message);
                }
                else{
-                  console.log("OOU PRISHLO SMSKA DAVAY INCEPTION DELAY NORM ZVUK A TO ETO HUYNAY");
+				gotMessage();
                }
             }
 			prevEvN = eventItem.seqNum;
@@ -96,4 +96,9 @@ async function afetchEvents(){
    };
 
    xhr.send(null);
+}
+
+function gotMessage(){
+	var audio = new Audio('res/music/icq.mp3');
+	audio.play();
 }
