@@ -101,7 +101,6 @@ function fetchEvents(){
 	xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
 	xhr.send(null);
 	if (xhr.status === 200) {
-		//console.log(xhr.responseText);
 		var respObj = JSON.parse(xhr.responseText);
 		currentEventsURL = respObj.response.data.fetchBaseURL;
 		respObj.response.data.events.forEach(function (eventItem) {
@@ -128,6 +127,42 @@ function fetchEvents(){
 		return 0;
 	}
 }
+async function afetchEvents(){
+	var xhr = new XMLHttpRequest();
+	xhr.open('GET', currentEventsURL.concat("&f=JSON"), true);
+	xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+ 
+	xhr.onload = function() {
+	   if (xhr.status === 200) {
+		  console.log(xhr.responseText);
+		  var respObj = JSON.parse(xhr.responseText);
+		  currentEventsURL = respObj.response.data.fetchBaseURL;
+		  respObj.response.data.events.forEach(function (eventItem) {
+			 if (eventItem.type === "buddylist"){
+				if (lastFetch === 0){
+				   buddiesList = eventItem.eventData.groups[0].buddies;
+				   lastFetch = 1;
+				}
+			 }
+			 else if (eventItem.type === "im"){
+				if (eventItem.eventData.source.aimId === currentConversation.toString()){
+				   appendConvo(currentConversation, eventItem.eventData.message);
+				}
+				else{
+				 gotMessage();
+				}
+			 }
+			 prevEvN = eventItem.seqNum;
+		  });
+		  return 1;
+	   } else {
+		  throw new Error('Request failed: ' + xhr.statusText);
+		  return 0;
+	   }
+	};
+ 
+	xhr.send(null);
+ }
 
 function getConsent(){
 	var data = "f=JSON&devId=n1n4FcOouKVTJf11&enc=".concat(sessionKey);
@@ -159,21 +194,31 @@ function getInfo(){
 	}	
 }
 
-function sendIM(destination, message){
-	var data = "f=JSON&k=n1n4FcOouKVTJf11".concat("&ts=").concat(new Date().getTime() / 1000).concat("&sig_sha256=").concat(sessionKey).concat("&t=").concat(destination).concat("&message=").concat(message).concat("&a=").concat(aToken).concat("&aimsid=").concat(aimsid);
-	var xhr = new XMLHttpRequest();
-	xhr.open('GET', oscarAPI.concat("/im/sendIM").concat("?").concat(data), false);
-	xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-	xhr.send(null);
-	if (xhr.status === 200) {
-		if (JSON.parse(xhr.responseText).response.statusCode === 200){
-			appendConvo(login, message);
-		}
-		return 1;
-	} else {
-		throw new Error('Request failed: ' + xhr.statusText);
-		return 0;
-	}	
+function sendIM(destination, message) {
+    var data = "f=JSON"
+        .concat("&k=n1n4FcOouKVTJf11")
+        .concat("&ts=").concat(Math.floor(new Date().getTime() / 1000))
+        .concat("&sig_sha256=").concat(sessionKey)
+        .concat("&t=").concat(destination)
+        .concat("&message=").concat(encodeURIComponent(message))
+        .concat("&a=").concat(aToken)
+        .concat("&aimsid=").concat(aimsid);
+
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', "http://api.oscar.nina.bz/im/sendIM?" + data, false);
+    xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+    xhr.send(null);
+
+    if (xhr.status === 200) {
+        var response = JSON.parse(xhr.responseText);
+        if (response.response.statusCode === 200) {
+            appendConvo(login, message);
+            return 1;
+        }
+    } else {
+        throw new Error('Request failed: ' + xhr.statusText);
+    }
+    return 0;
 }
 
 function getConsent(){
@@ -189,4 +234,9 @@ function getConsent(){
 		throw new Error('Request failed: ' + xhr.statusText);
 		return 0;
 	}	
+}
+
+function gotMessage(){
+	var audio = new Audio('res/music/icq.mp3');
+	audio.play();
 }
