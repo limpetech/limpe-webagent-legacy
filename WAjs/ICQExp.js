@@ -144,20 +144,6 @@ function getConsent(){
 	}	
 }
 
-function getInfo(){
-	var data = "f=JSON&devId=n1n4FcOouKVTJf11&a=".concat(aToken).concat("&sig_sha256=").concat(sessionKey).concat("&ts=").concat(new Date().getTime() / 1000);
-	var xhr = new XMLHttpRequest();
-	xhr.open('POST', screennameAPI.concat("/auth/getInfo"), false);
-	xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-	xhr.send(data);
-	if (xhr.status === 200) {
-		console.log(xhr.responseText);
-		return 1;
-	} else {
-		throw new Error('Request failed: ' + xhr.statusText);
-		return 0;
-	}	
-}
 
 function sendIM(destination, message){
 	var data = "f=JSON&k=n1n4FcOouKVTJf11".concat("&ts=").concat(new Date().getTime() / 1000).concat("&sig_sha256=").concat(sessionKey).concat("&t=").concat(destination).concat("&message=").concat(message).concat("&a=").concat(aToken).concat("&aimsid=").concat(aimsid);
