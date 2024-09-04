@@ -5,7 +5,7 @@ ICQ WebAPI Javascript Library. (c) InceptionTime - 2024. All rights reserved.
 // -------------------------------------------------
 // Configuration
 var screennameAPI = "https://api.screenname.nina.bz";
-var oscarAPI = "http://api.oscar.nina.bz";
+var oscarAPI = "https://api.oscar.nina.bz";
 
 
 // -------------------------------------------------
@@ -199,7 +199,7 @@ function getPresence(){
 	xhr.send(null);
 	if (xhr.status === 200) {
 		var respObj = JSON.parse(xhr.responseText);
-		buddiesList = respObj.response.data.groups[0].buddies;
+		buddiesList = respObj.response.data.groups;
 		return 1;
 	} else {
 		throw new Error('Request failed: ' + xhr.statusText);
