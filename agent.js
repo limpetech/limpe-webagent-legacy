@@ -56,7 +56,6 @@ function sendIMA(extUIN){
 		sendIM(extUIN, document.getElementsByClassName("imscene-bottom-input")[0].value);
 	}
 }
-
 function appendConvo(from, msg){
 	if (from === login){
 		document.getElementsByClassName("imscene-bottom-input")[0].value = "";
