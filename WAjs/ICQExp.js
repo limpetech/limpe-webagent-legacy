@@ -116,7 +116,7 @@ function fetchEvents(){
 					appendConvo(currentConversation, eventItem.eventData.message);
 				}
 				else{
-					console.log("OOU PRISHLO SMSKA DAVAY INCEPTION DELAY NORM ZVUK A TO ETO HUYNAY");
+					gotMessage();
 				}
 			}
 			prevEvN = eventItem.seqNum;
@@ -128,7 +128,42 @@ function fetchEvents(){
 		return 0;
 	}
 }
-
+async function afetchEvents(){
+	var xhr = new XMLHttpRequest();
+	xhr.open('GET', currentEventsURL.concat("&f=JSON"), true);
+	xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+ 
+	xhr.onload = function() {
+	   if (xhr.status === 200) {
+		  console.log(xhr.responseText);
+		  var respObj = JSON.parse(xhr.responseText);
+		  currentEventsURL = respObj.response.data.fetchBaseURL;
+		  respObj.response.data.events.forEach(function (eventItem) {
+			 if (eventItem.type === "buddylist"){
+				if (lastFetch === 0){
+				   buddiesList = eventItem.eventData.groups[0].buddies;
+				   lastFetch = 1;
+				}
+			 }
+			 else if (eventItem.type === "im"){
+				if (eventItem.eventData.source.aimId === currentConversation.toString()){
+				   appendConvo(currentConversation, eventItem.eventData.message);
+				}
+				else{
+				   gotMessage();
+				}
+			 }
+			 prevEvN = eventItem.seqNum;
+		  });
+		  return 1;
+	   } else {
+		  throw new Error('Request failed: ' + xhr.statusText);
+		  return 0;
+	   }
+	};
+ 
+	xhr.send(null);
+ }
 function getConsent(){
 	var data = "f=JSON&devId=n1n4FcOouKVTJf11&enc=".concat(sessionKey);
 	var xhr = new XMLHttpRequest();
@@ -191,4 +226,9 @@ function getPresence(){
 		throw new Error('Request failed: ' + xhr.statusText);
 		return 0;
 	}
+}
+
+function gotMessage(){
+	var audio = new Audio('res/music/icq.mp3');
+	audio.play();
 }
