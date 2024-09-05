@@ -61,5 +61,5 @@ function appendConvo(from, msg){
 	if (from === login){
 		document.getElementsByClassName("imscene-bottom-input")[0].value = "";
 	}
-	document.getElementsByClassName("msg")[0].innerHTML = document.getElementsByClassName("msg")[0].innerHTML.concat(from).concat(": ").concat(msg).concat("<br>");
+	document.getElementsByClassName("msg")[0].innerHTML = document.getElementsByClassName("msg")[0].innerHTML.concat(from).concat(": ").concat(replaceKoloboks(msg)).concat("<br>");
 }
