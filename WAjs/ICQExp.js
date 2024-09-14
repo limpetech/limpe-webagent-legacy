@@ -50,6 +50,7 @@ var currentConversation;
 
 // Etc.
 var lastFetch = 0;
+var readedEvents = [];
 // -------------------------------------------------
 
 
@@ -139,18 +140,15 @@ async function afetchEvents(){
 		  var respObj = JSON.parse(xhr.responseText);
 		  currentEventsURL = respObj.response.data.fetchBaseURL;
 		  respObj.response.data.events.forEach(function (eventItem) {
-			 if (eventItem.type === "buddylist"){
-				if (lastFetch === 0){
-				   buddiesList = eventItem.eventData.groups[0].buddies;
-				   lastFetch = 1;
-				}
-			 }
-			 else if (eventItem.type === "im"){
-				if (eventItem.eventData.source.aimId === currentConversation.toString()){
-				   appendConvo(currentConversation, eventItem.eventData.message);
-				}
-				else{
-				   gotMessage();
+			if (eventItem.type === "im"){
+				if (!readedEvents.includes(eventItem.seqNum)){
+					if (eventItem.eventData.source.aimId === currentConversation.toString()){
+						appendConvo(currentConversation, eventItem.eventData.message);
+					}
+					else{
+						gotMessage();
+					}
+					readedEvents.push(eventItem.seqNum);
 				}
 			 }
 			 prevEvN = eventItem.seqNum;
