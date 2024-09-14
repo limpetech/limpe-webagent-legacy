@@ -4,7 +4,7 @@ ICQ WebAPI Javascript Library. (c) InceptionTime - 2024. All rights reserved.
 
 // -------------------------------------------------
 // Configuration
-var APIHost = "https://u.myteam.vmailru.net/api/v125";
+var APIHost = "https://u.myteam.vmailru.net/api/v125/";
 
 
 // -------------------------------------------------
