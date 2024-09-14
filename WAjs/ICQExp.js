@@ -57,7 +57,7 @@ var lastFetch = 0;
 function initialRequest(){
 	var data = "f=JSON&k=ic1zmlWFTdkiTnkL&s=".concat(login).concat("&pwd=1").concat("&clientVersion=VKTeams Web  ic1zmlWFTdkiTnkL 24.5.9(2024/09/03 15:00 release/24.5c) unknown desktop&clientName=webVKTeams&tokenType=otp_via_email");
 	var xhr = new XMLHttpRequest();
-	xhr.open('POST', screennameAPI.concat("wim/auth/clientLogin?f=JSON"), false);
+	xhr.open('POST', APIHost.concat("wim/auth/clientLogin?f=JSON"), false);
 	xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
 	xhr.send(data);
 	if (xhr.status === 200) {
@@ -70,7 +70,7 @@ function initialRequest(){
 function login(){
 	var data = "f=JSON&k=ic1zmlWFTdkiTnkL&s=".concat(login).concat("&pwd=").concat(pwd).concat("&clientVersion=VKTeams Web  ic1zmlWFTdkiTnkL 24.5.9(2024/09/03 15:00 release/24.5c) unknown desktop&clientName=webVKTeams&tokenType=longterm");
 	var xhr = new XMLHttpRequest();
-	xhr.open('POST', screennameAPI.concat("wim/auth/clientLogin?f=JSON"), false);
+	xhr.open('POST', APIHost.concat("wim/auth/clientLogin?f=JSON"), false);
 	xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
 	xhr.send(data);
 	if (xhr.status === 200) {
