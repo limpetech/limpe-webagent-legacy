@@ -4,8 +4,7 @@ ICQ WebAPI Javascript Library. (c) InceptionTime - 2024. All rights reserved.
 
 // -------------------------------------------------
 // Configuration
-var screennameAPI = "https://api.screenname.nina.bz";
-var oscarAPI = "https://api.oscar.nina.bz";
+var APIHost = "https://u.myteam.vmailru.net/api/v125";
 
 
 // -------------------------------------------------
@@ -56,9 +55,22 @@ var lastFetch = 0;
 
 
 function initialRequest(){
-	var data = "f=JSON&k=n1n4FcOouKVTJf11&s=".concat(login).concat("&pwd=").concat(pwd).concat("&clientVersion=0.1&ClientName=OscarWave");
+	var data = "f=JSON&k=ic1zmlWFTdkiTnkL&s=".concat(login).concat("&pwd=1").concat("&clientVersion=VKTeams Web  ic1zmlWFTdkiTnkL 24.5.9(2024/09/03 15:00 release/24.5c) unknown desktop&clientName=webVKTeams&tokenType=otp_via_email");
 	var xhr = new XMLHttpRequest();
-	xhr.open('POST', screennameAPI.concat("/auth/clientLogin?f=JSON"), false);
+	xhr.open('POST', screennameAPI.concat("wim/auth/clientLogin?f=JSON"), false);
+	xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+	xhr.send(data);
+	if (xhr.status === 200) {
+		return 1;
+	} else {
+		throw new Error('Request failed: ' + xhr.statusText);
+		return 0;
+	}	
+}
+function login(){
+	var data = "f=JSON&k=ic1zmlWFTdkiTnkL&s=".concat(login).concat("&pwd=").concat(pwd).concat("&clientVersion=VKTeams Web  ic1zmlWFTdkiTnkL 24.5.9(2024/09/03 15:00 release/24.5c) unknown desktop&clientName=webVKTeams&tokenType=longterm");
+	var xhr = new XMLHttpRequest();
+	xhr.open('POST', screennameAPI.concat("wim/auth/clientLogin?f=JSON"), false);
 	xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
 	xhr.send(data);
 	if (xhr.status === 200) {
@@ -77,9 +89,9 @@ function makeSessionKey(){
 }
 
 function startSession(){
-	var data = "f=JSON&k=n1n4FcOouKVTJf11&a=".concat(aToken).concat("&events=im");
+	var data = "f=JSON&k=n1n4FcOouKVTJf11&a=".concat(aToken).concat("&events=im&clientName=webVKTeams");
 	var xhr = new XMLHttpRequest();
-	xhr.open('GET', screennameAPI.concat("/aim/startSession").concat("?").concat(data), false);
+	xhr.open('GET', screennameAPI.concat("wim/aim/startSession").concat("?").concat(data), false);
 	xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
 	xhr.send(null);
 	if (xhr.status === 200) {
