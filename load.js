@@ -1,12 +1,20 @@
 /* WebAgent ICQ loading script */
 var appHTML = '<link href="res/web.css" rel="stylesheet" /><div class="scene" onload="setUp()"><div class="buddylist"><div class="buddylist-header"><h4>Контакты</h4></div><div class="buddylist-list"></div><br><br><div class="buddylist-bottom"><div class="buddylist-bottom-status"><img height="30px" width="30px" id="statusIcon"></div></div></div></div>';
-var loginHTML = '<link href="res/web.css" rel="stylesheet" /><div class="loginpage"><img src="res/banner.png" width="240" height="80"><br><br><input id="UINinput" type="text" placeholder="UIN/Screen name/Почта"></input><br><br><input id="PWDinput" type="password" placeholder="Пароль"></input><br><br><button onclick="performLogin()">Войти в систему</button></div>';
+var loginHTML = '<link href="res/web.css" rel="stylesheet" /><div class="loginpage"><img src="res/banner.png" width="240" height="80"><br><br><input id="UINinput" type="text" placeholder="UIN/Screen name/Почта"></input><br><br><button onclick="initial()">Отправить код</button></div>';
+var pwdHTML = '<link href="res/web.css" rel="stylesheet" /><div class="loginpage"><img src="res/banner.png" width="240" height="80"><br><br><input id="PWDinput" type="password" placeholder="Пароль"></input><br><br><button onclick="performLogin()">Войти в систему</button></div>';
 
-function performLogin(){
+function initial(){
 	login = document.getElementById("UINinput").value;
-	pwd = document.getElementById("PWDinput").value;
 	
 	if (initialRequest() === 1){
+		makePWDPage();
+	}
+}
+
+function performLogin(){
+	pwd = document.getElementById("PWDinput").value;
+	
+	if (login() === 1){
 		makeSessionKey()
 		if (startSession() === 1){
 			document.body.innerHTML = appHTML;
@@ -15,7 +23,11 @@ function performLogin(){
 	}
 }
 
+
 function makeLoginPage(){
 	document.body.innerHTML = loginHTML;
 }
 
+function makePWDPage(){
+	document.body.innerHTML = pwdHTML;
+}
