@@ -9,7 +9,7 @@ var table = {
     ":-)": "smile.gif",
     "(smile)": "smile.gif",
     "(ok)": "ok.gif",
-    "(umnik"): "umnik2.gif"
+    "(umnik)": "umnik2.gif"
 };
 
 
