@@ -6,7 +6,10 @@
 // Configuration
 var table = {
     ":)": "smile.gif",
-    ":-)": "smile.gif"
+    ":-)": "smile.gif",
+    "(smile)": "smile.gif",
+    "(ok)": "ok.gif",
+    "(umnik"): "umnik2.gif"
 };
 
 
@@ -16,7 +19,7 @@ var table = {
 
 function replaceKoloboks(text){
     for (var key in table){
-        text = text.replace(key, "<img src='res/smiles/kolobok/" + table[key] + "' />");
+        text = text.replace("/ "+key+" /g", "<img src='res/smiles/kolobok/" + table[key] + "' />");
     }
     return text;
 }
