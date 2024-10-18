@@ -146,7 +146,7 @@ async function afetchEvents(){
 						appendConvo(currentConversation, eventItem.eventData.message);
 					}
 					else{
-						gotMessage();
+						gotMessage(eventItem.eventData.source.aimId, eventItem.eventData.message);
 					}
 					readedEvents.push(eventItem.seqNum);
 				}
@@ -226,7 +226,8 @@ function getPresence(){
 	}
 }
 
-function gotMessage(){
+function gotMessage(from, message){
 	var audio = new Audio('res/music/icq.mp3');
 	audio.play();
+	alert("New message from "+from+": "+message);
 }
