@@ -4,8 +4,10 @@ ICQ WebAPI Javascript Library. (c) InceptionTime - 2024. All rights reserved.
 
 // -------------------------------------------------
 // Configuration
-var screennameAPI = "https://api.screenname.nina.bz";
-var oscarAPI = "https://api.oscar.nina.bz";
+var config = {
+	screennameAPI: "https://api.screenname.nina.bz",
+	voscarAPI: "https://api.oscar.nina.bz"
+};
 
 
 // -------------------------------------------------
@@ -43,7 +45,7 @@ var buddiesList;
 
 var buddies;
 
-// Integration with WebAgent (TM)
+// Integration with WebAgent
 var currentConversation;
 
 
@@ -57,9 +59,9 @@ var readedEvents = [];
 
 
 function initialRequest(){
-	var data = "f=JSON&k=n1n4FcOouKVTJf11&s=".concat(login).concat("&pwd=").concat(pwd).concat("&clientVersion=0.1&ClientName=OscarWave");
+	var data = "f=JSON&k=n1n4FcOouKVTJf11&s="+login+"&pwd="+pwd+"&clientVersion=0.1&ClientName=OscarWave";
 	var xhr = new XMLHttpRequest();
-	xhr.open('POST', screennameAPI.concat("/auth/clientLogin?f=JSON"), false);
+	xhr.open('POST', config.screennameAPI+"/auth/clientLogin?f=JSON", false);
 	xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
 	xhr.send(data);
 	if (xhr.status === 200) {
@@ -80,7 +82,7 @@ function makeSessionKey(){
 function startSession(){
 	var data = "f=JSON&k=n1n4FcOouKVTJf11&a=".concat(aToken).concat("&events=im");
 	var xhr = new XMLHttpRequest();
-	xhr.open('GET', screennameAPI.concat("/aim/startSession").concat("?").concat(data), false);
+	xhr.open('GET', config.screennameAPI.concat("/aim/startSession").concat("?").concat(data), false);
 	xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
 	xhr.send(null);
 	if (xhr.status === 200) {
@@ -165,7 +167,7 @@ async function afetchEvents(){
 function getConsent(){
 	var data = "f=JSON&devId=n1n4FcOouKVTJf11&enc=".concat(sessionKey);
 	var xhr = new XMLHttpRequest();
-	xhr.open('POST', screennameAPI.concat("/auth/getConsent"), false);
+	xhr.open('POST', config.screennameAPI.concat("/auth/getConsent"), false);
 	xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
 	xhr.send(data);
 	if (xhr.status === 200) {
@@ -198,7 +200,7 @@ function sendIM(destination, message){
 function deleteEvent(){
 	var data = "f=JSON&aimsid=".concat(aimsid).concat("&eventNumber=").concat(prevEvN);
 	var xhr = new XMLHttpRequest();
-	xhr.open('GET', screennameAPI.concat("/aim/deleteEvents").concat("?").concat(data), false);
+	xhr.open('GET', config.screennameAPI.concat("/aim/deleteEvents").concat("?").concat(data), false);
 	xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
 	xhr.send(null);
 	if (xhr.status === 200) {
