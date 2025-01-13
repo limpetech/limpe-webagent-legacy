@@ -6,7 +6,7 @@ ICQ WebAPI Javascript Library. (c) InceptionTime - 2024. All rights reserved.
 // Configuration
 var config = {
 	screennameAPI: "https://api.screenname.nina.bz",
-	voscarAPI: "https://api.oscar.nina.bz"
+	oscarAPI: "https://api.oscar.nina.bz"
 };
 
 
@@ -183,7 +183,7 @@ function getConsent(){
 function sendIM(destination, message){
 	var data = "f=JSON&k=n1n4FcOouKVTJf11".concat("&ts=").concat(new Date().getTime() / 1000).concat("&sig_sha256=").concat(sessionKey).concat("&t=").concat(destination).concat("&message=").concat(message).concat("&a=").concat(aToken).concat("&aimsid=").concat(aimsid);
 	var xhr = new XMLHttpRequest();
-	xhr.open('GET', oscarAPI.concat("/im/sendIM").concat("?").concat(data), false);
+	xhr.open('GET', config.oscarAPI.concat("/im/sendIM").concat("?").concat(data), false);
 	xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
 	xhr.send(null);
 	if (xhr.status === 200) {
@@ -215,7 +215,7 @@ function deleteEvent(){
 function getPresence(){
 	var data = "f=JSON&aimsid=".concat(aimsid).concat("&bl=true")
 	var xhr = new XMLHttpRequest();
-	xhr.open('GET', oscarAPI.concat("/presence/get").concat("?").concat(data), false);
+	xhr.open('GET', config.oscarAPI.concat("/presence/get").concat("?").concat(data), false);
 	xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
 	xhr.send(null);
 	if (xhr.status === 200) {
