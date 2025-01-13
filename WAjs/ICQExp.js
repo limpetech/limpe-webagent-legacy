@@ -1,7 +1,3 @@
-/*
-ICQ WebAPI Javascript Library. (c) InceptionTime - 2024. All rights reserved.
-*/
-
 // -------------------------------------------------
 // Configuration
 var config = {
