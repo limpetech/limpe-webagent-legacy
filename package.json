@@ -1,0 +1,16 @@
+{
+  "name": "webagent-legacy",
+  "version": "1.0.0",
+  "description": "WebAgent allows you to connect to NINA/Escargot network using NINA's WebAPI right from your browser.",
+  "dependencies": {
+    "@babel/core": "^7.27.1",
+    "@babel/preset-env": "^7.27.1",
+    "@babel/preset-react": "^7.27.1",
+    "babel-loader": "^10.0.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "devDependencies": {
+    "webpack-cli": "^6.0.1"
+  }
+}
