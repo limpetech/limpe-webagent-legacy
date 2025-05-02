@@ -12,9 +12,7 @@ export const MainUI = function (props){
         ]);
     });
 
-    return <app>
-        <aside style={ { float:"left", maxWidth:"400px", padding:"5px", paddingTop:"20px", paddingBottom:"20px", minHeight:"600px", backgroundColor:"white"  } }>
+    return <aside style={ { float:"left", maxWidth:"400px", padding:"5px", paddingTop:"20px", paddingBottom:"20px", minHeight:"600px", backgroundColor:"white"  } }>
             { contacts }
-        </aside>
-    </app>;
+        </aside>;
 };

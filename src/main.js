@@ -29,7 +29,9 @@ const callbacks = {
 
             // Load main UI after receiving buddy list
             ReactDOM.render(
-                <MainUI contacts={ contactList }/>,
+                <app>
+                    <MainUI contacts={ contactList }/>
+                </app>,
                 document.body
             );
 
