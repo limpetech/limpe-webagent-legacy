@@ -1,0 +1,41 @@
+name: NodeJS with Webpack
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [20.x]
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v4
+      with:
+        node-version: ${{ matrix.node-version }}
+
+    - name: Build
+      run: |
+        npm install
+        npx webpack
+
+    - name: Generate artifact name
+      id: generate-name
+      run: |
+        echo "::set-output name=artifact::${{ github.event.repository.name }}.${{ github.ref_name }}.${{ github.run_id }}.zip"
+
+    - name: Archive production artifacts
+      uses: actions/upload-artifact@v4
+      with:
+        name: ${{ steps.generate-name.outputs.artifact }}
+        path: |
+          dist
+          !dist/**/*.md
