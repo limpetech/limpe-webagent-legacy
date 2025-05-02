@@ -6,9 +6,10 @@ export const MainUI = function (props){
 
     // Foreach through contacts and add them to the contact list
     props.contacts.forEach(contact => {
-        contacts.push(
-            <span>{ contact }</span>
-        );
+        contacts.push([
+            <span>{ contact }</span>,
+            <br/>
+        ]);
     });
 
     return <app>
